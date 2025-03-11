@@ -89,9 +89,6 @@
             </div>
         </aside>
         
-        {{-- <!-- Content -->
-        {{ $slot }} --}}
-
         <main class="m-auto lg:ml-64 p-6 h-screen">
             @yield('content')
         </main>
