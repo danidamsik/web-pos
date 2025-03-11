@@ -53,9 +53,6 @@
                     </a>
 
                     <a :class="activePage === '/kategori' ? 'bg-[#fe6806]' : ''" class="group flex items-center p-2 text-[#fe6806] transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-[#fe6806] dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-black" href="/kategori" wire:navigate>
-                        {{-- <svg :class="activePage === '/product' ? 'fill-black' : ''" class="-mr-1 group-hover:fill-black" xmlns="http://www.w3.org/2000/svg" height="25px" viewBox="0 -960 960 960" width="25px" fill="#fe6806">
-                            <path d="M200-80q-33 0-56.5-23.5T120-160v-451q-18-11-29-28.5T80-680v-120q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v120q0 23-11 40.5T840-611v451q0 33-23.5 56.5T760-80H200Zm0-520v440h560v-440H200Zm-40-80h640v-120H160v120Zm200 280h240v-80H360v80Zm120 20Z"/>
-                        </svg> --}}
                         <svg :class="activePage === '/kategori' ? 'fill-black' : ''" class="-mr-1 group-hover:fill-black" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#fe6806"><path d="m276-528 204-336 204 336H276ZM696-96q-70 0-119-49t-49-119q0-70 49-119t119-49q70 0 119 49t49 119q0 70-49 119T696-96Zm-552-24v-288h288v288H144Zm551.77-48Q736-168 764-195.77q28-27.78 28-68Q792-304 764.23-332q-27.78-28-68-28Q656-360 628-332.23q-28 27.78-28 68Q600-224 627.77-196q27.78 28 68 28ZM216-192h144v-144H216v144Zm188-408h152l-76-125-76 125Zm76 0ZM360-336Zm331 67Z"/></svg>
                         <span :class="activePage === '/kategori' ? 'text-black' : ''" class="mx-2 text-sm font-medium">Kategori</span>
                     </a>
@@ -88,7 +85,7 @@
                 </nav>
             </div>
         </aside>
-        
+
         <main class="m-auto lg:ml-64 p-6 h-screen">
             @yield('content')
         </main>
