@@ -89,8 +89,12 @@
             </div>
         </aside>
         
-        <!-- Content -->
-        {{ $slot }}
+        {{-- <!-- Content -->
+        {{ $slot }} --}}
+
+        <main class="m-auto lg:ml-64 p-6 h-screen">
+            @yield('content')
+        </main>
 
     </div>
     @livewireScripts

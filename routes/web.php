@@ -1,19 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Livewire\Dashboard;
-use App\Livewire\KasirTransaction;
-use App\Livewire\Kategori;
-use App\Livewire\ManajementFinance;
-use App\Livewire\ManajementProduct;
-use App\Livewire\Settings;
 
-Route::get('/dashboard', Dashboard::class);
-Route::get('/transaction', KasirTransaction::class);
-Route::get('/product', ManajementProduct::class);
-Route::get('/finance', ManajementFinance::class);
-Route::get('/settings', Settings::class);
-Route::get('/kategori', Kategori::class);
+Route::get('/dashboard', function() { return view('dashboard'); });
 
+Route::get('/transaction', function() { return view('kasir-transaction'); });
+
+Route::get('/kategori', function() { return view('kategori'); });
+
+Route::get('/product', function() { return view('manajement-product'); });
+
+Route::get('/finance', function() { return view('manajement-finance'); });
+
+Route::get('/settings', function() { return view('settings'); });
 
 
