@@ -1,4 +1,4 @@
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-y-5 gap-x-5 text-white">
+<div class="ml-4 -mr-5 lg:ml-0 lg:mr-0 grid grid-cols-1 lg:grid-cols-3 gap-y-5 gap-x-5 text-white">
 
     <div class="col-span-1 lg:col-span-2 grid grid-cols-2 grid-rows-3 gap-y-2 gap-x-4 w-full -ml-5 lg:ml-0 bg-gray-900 p-5 rounded-lg">
         <div class="col-span-2 w-full">
