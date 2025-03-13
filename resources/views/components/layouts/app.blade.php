@@ -13,7 +13,6 @@
     </style>
 
 <body x-data="{open:false}" class="bg-[#0e0e0e] h-screen">
-
     <!-- Navbar -->
     <nav class="bg-black text-white p-4 fixed z-20 top-0 left-0 w-full h-14 border-1 shadow-md z-50">
         <button @click="open = !open" class="lg:hidden -ml-3 -mt-2 flex flex-col gap-1 p-2">
@@ -143,7 +142,7 @@
             </div>
         </aside>
 
-        <main class="lg:ml-64 p-6">
+        <main class="lg:ml-64 p-6 w-full">
             @yield('content')
         </main>
 

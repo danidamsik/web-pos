@@ -22,6 +22,9 @@ Route::get('/printer-settings', function() { return view('printer-settings'); })
 
 Route::get('/users', function() { return view('users'); });
 
+Route::get('/test', function() { return view('test'); });
+
+
 
 
 
