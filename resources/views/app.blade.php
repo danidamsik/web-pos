@@ -16,11 +16,11 @@
     <!-- Navbar -->
     <nav class="bg-black text-white p-4 fixed z-20 top-0 left-0 w-full h-14 border-1 shadow-md z-50">
         <button @click="open = !open" class="lg:hidden -ml-3 -mt-2 flex flex-col gap-1 p-2">
-            <span class="block w-7 h-1 bg-[#fe6806] rounded transition-transform duration-300" 
+            <span class="block w-7 h-1 bg-[#fe6806] rounded transition-transform duration-300"
                   :class="open ? 'rotate-45 translate-y-2' : ''"></span>
-            <span class="block w-7 h-1 bg-[#fe6806] rounded transition-opacity duration-300" 
+            <span class="block w-7 h-1 bg-[#fe6806] rounded transition-opacity duration-300"
                   :class="open ? 'opacity-0' : ''"></span>
-            <span class="block w-7 h-1 bg-[#fe6806] rounded transition-transform duration-300" 
+            <span class="block w-7 h-1 bg-[#fe6806] rounded transition-transform duration-300"
                   :class="open ? '-rotate-45 -translate-y-2' : ''"></span>
         </button>
     </nav>
@@ -28,7 +28,7 @@
     <!-- Sidebar + Content Wrapper -->
     <div class="flex pt-14"> <!-- pt-16 = Padding Top agar tidak tertutup Navbar -->
 
-        <aside x-cloak x-show="open || window.innerWidth >= 1024" 
+        <aside x-cloak x-show="open || window.innerWidth >= 1024"
             x-transition:enter="transform transition ease-out duration-300"
             x-transition:enter-start="-translate-x-full opacity-0"
             x-transition:enter-end="translate-x-0 opacity-100"
@@ -88,15 +88,15 @@
                                 </svg>
                                 <span :class="activePage === '/pemasukan' ? 'text-black' : ''" class="mx-2 text-sm font-medium">Pemasukan</span>
                             </a>
-        
+
                             <a :class="activePage === '/pengeluaran' ? 'bg-[#fe6806]' : ''" class="group flex items-center p-1 mt-2 text-[#fe6806] transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-[#fe6806] dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-black" href="/pengeluaran" wire:navigate>
                                 <svg :class="activePage === '/pengeluaran' ? 'stroke-black' : ''"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                   </svg>
-                                  
+
                                 <span :class="activePage === '/pengeluaran' ? 'text-black' : ''" class="mx-1 text-sm font-medium">Pengeluaran</span>
                             </a>
-        
+
                             <a :class="activePage === '/payment-method' ? 'bg-[#fe6806]' : ''" class="group flex items-center p-1 mt-2 text-[#fe6806] transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-[#fe6806] dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-black" href="/payment-method" wire:navigate>
                                 <svg :class="activePage === '/payment-method' ? 'stroke-black' : ''" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
@@ -118,26 +118,26 @@
                                 <svg :class="activePage === '/roles' ? 'stroke-black' : ''" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
                                   </svg>
-                                  
+
                                 <span :class="activePage === '/roles' ? 'text-black' : ''" class="mx-2 text-sm font-medium">Roles</span>
                             </a>
-                            
+
                             <a :class="activePage === '/users' ? 'bg-[#fe6806]' : ''" class="group flex items-center px-3 p-1 mt-2 text-[#fe6806] transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-[#fe6806] dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-black" href="/users" wire:navigate>
                                 <svg :class="activePage === '/users' ? 'stroke-black' : ''" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
-                                </svg>                               
+                                </svg>
                                 <span :class="activePage === '/users' ? 'text-black' : ''" class="mx-2 text-sm font-medium">Users</span>
                             </a>
-                            
+
                             <a :class="activePage === '/printer-settings' ? 'bg-[#fe6806]' : ''" class="group flex items-center px-3 p-1 mt-2 text-[#fe6806] transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-[#fe6806] dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-black" href="/printer-settings" wire:navigate>
                                 <svg :class="activePage === '/printer-settings' ? 'stroke-black' : ''" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0 1 10.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0 .229 2.523a1.125 1.125 0 0 1-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0 0 21 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 0 0-1.913-.247M6.34 18H5.25A2.25 2.25 0 0 1 3 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 0 1 1.913-.247m10.5 0a48.536 48.536 0 0 0-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5Zm-3 0h.008v.008H15V10.5Z" />
                                   </svg>
-                                                                 
+
                                 <span :class="activePage === '/printer-settings' ? 'text-black' : ''" class="mx-2 text-sm font-medium">Pengaturan Printer</span>
                             </a>
                         </div>
-                    </div>               
+                    </div>
                 </nav>
             </div>
         </aside>
@@ -149,3 +149,4 @@
     </div>
     @livewireScripts
 </body>
+
