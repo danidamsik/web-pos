@@ -6,9 +6,9 @@
             <div class="my-3 lg:my-0">
                 <div x-cloak x-show="$wire.show" class="w-screen h-screen fixed inset-0 bg-black bg-opacity-75"></div>
                 <button @click="selectedItems.length > 0 && (open = true)" x-text="buttonText"
-                    class="px-7 py-2 text-xs font-medium text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:ring-red-300">
+                    class="px-7 py-2 text-xs font-medium text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-2 focus:ring-red-300">
                 </button>
-                <button @click="$dispatch('create'), $wire.show=true" class="ml-1 px-7 py-2 text-xs font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300">
+                <button @click="$dispatch('create'), $wire.show=true" class="ml-1 px-7 py-2 text-xs font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-2 focus:ring-blue-300">
                     Add Category
                 </button>
             </div>
@@ -29,7 +29,11 @@
                 <template x-for="item in items" :key="item.id">
                     <tr class="border-b border-gray-700">
                         <td class="py-2 px-4">
-                            <input type="checkbox" :value="item.id" x-model="selectedItems" @change="checkStatus">
+                            <input
+                            type="checkbox"
+                            :value="item.id"
+                            x-model="selectedItems"
+                            @change="checkStatus"/>
                         </td>
                         <td class="py-2 px-4" x-text="item.name"></td>
                         <td class="py-2 px-4">
@@ -44,7 +48,10 @@
                                 </svg>
                             </template>
                         </td>
-                        <td @click="$dispatch('update'); $wire.show = true" class="py-2 px-4 text-teal-400 cursor-pointer">
+                        <td @click="$dispatch('update'); $wire.show = true" class="flex py-2 px-4 text-teal-400 cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 mt-0.5 mr-1">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                              </svg>
                             Edit
                         </td>
                     </tr>

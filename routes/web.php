@@ -22,6 +22,7 @@ Route::get('/printer-settings', function() { return view('page-content.printer-s
 
 Route::get('/users', function() { return view('page-content.users'); });
 
+// route test
 Route::get('/test', function() { return view('page-content.test'); });
 
 
